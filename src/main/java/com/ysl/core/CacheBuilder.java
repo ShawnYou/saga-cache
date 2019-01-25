@@ -1,9 +1,11 @@
 package com.ysl.core;
 
+import javax.cache.Cache;
+
 /**
- * @author aarony
- * @Created 2019-01-23 16:43
- * @E-mail aarony@synnex.com
+ *  Shawn You
  */
-public class CacheBuilder {
+public interface CacheBuilder {
+
+    Cache createCache();
 }

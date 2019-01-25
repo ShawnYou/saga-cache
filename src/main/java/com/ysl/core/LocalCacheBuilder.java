@@ -1,9 +1,13 @@
 package com.ysl.core;
 
+import javax.cache.Cache;
+
 /**
- * @author aarony
- * @Created 2019-01-23 17:07
- * @E-mail aarony@synnex.com
+ * Shawn You
  */
-public class LocalCacheBuilder {
+public class LocalCacheBuilder implements CacheBuilder{
+    @Override
+    public Cache createCache() {
+        return null;
+    }
 }

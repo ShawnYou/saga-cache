@@ -1,9 +1,31 @@
 package com.ysl.core;
 
+
 /**
- * @author aarony
- * @Created 2019-01-23 17:04
- * @E-mail aarony@synnex.com
+ * Abstract cache implements
  */
-public class AbstractJpaCache {
+public abstract class AbstractJpaCache implements JpaCache{
+
+
+    @Override
+    public Object get(Object key) {
+        //TODO
+        return null;
+    }
+
+    @Override
+    public void put(Object key, Object value) {
+        //TODO
+    }
+
+    @Override
+    public boolean remove(Object key) {
+        //TODO
+        return false;
+    }
+
+    @Override
+    public void clear() {
+
+    }
 }

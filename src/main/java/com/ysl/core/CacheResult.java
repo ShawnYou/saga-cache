@@ -3,5 +3,5 @@ package com.ysl.core;
 /**
  * Shawn You
  */
-public class RemoteCacheBuilder {
+public class CacheResult {
 }

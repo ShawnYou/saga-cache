@@ -1,9 +1,35 @@
 package com.ysl.core;
 
+
 /**
- * @author aarony
- * @Created 2019-01-23 16:35
- * @E-mail aarony@synnex.com
+ *  Basic cache operation
  */
-public class JpaCache {
+public interface JpaCache<K,V>{
+
+    /**
+     * get cache by cache key
+     * @param key
+     * @return
+     */
+    V get(K key);
+
+    /**
+     * put new cache
+     * @param key
+     * @param value
+     */
+    void put(K key,V value);
+
+    /**
+     * remove cache by cache key
+     * @param key
+     * @return
+     */
+    boolean remove(K key);
+
+    /**
+     * clear the cache
+     */
+    void clear();
+
 }
