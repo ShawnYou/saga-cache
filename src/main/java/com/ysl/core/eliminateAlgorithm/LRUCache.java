@@ -1,20 +1,23 @@
-package com.ysl.core;
+package com.ysl.core.eliminateAlgorithm;
+
+import com.ysl.core.InnerCache;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  *  local cache about LRU
  */
-public class LRUMap extends LinkedHashMap implements InnerCache{
+public class LRUCache<K,V> extends LinkedHashMap<K,V> implements InnerCache<K,V>{
     private int capacity;
 
-    public LRUMap(int capacity){
+    public LRUCache(int capacity){
         super(capacity,0.75f,true);
         this.capacity = capacity;
     }
 
     @Override
-    public Object getValue(Object key) {
+    public V getValue(K key) {
         return get(key);
     }
 
@@ -22,7 +25,7 @@ public class LRUMap extends LinkedHashMap implements InnerCache{
     public Map getAllValues(Collection keys) {
         Map ret = new HashMap();
         keys.forEach(key ->{
-            Object value = get(key);
+            V value = get(key);
             if(value != null){
                 ret.put(key,value);
             }
@@ -31,15 +34,16 @@ public class LRUMap extends LinkedHashMap implements InnerCache{
     }
 
     @Override
-    public void putValue(Object key, Object value) {
+    public V putValue(K key, V value) {
         put(key,value);
+        return value;
     }
 
     @Override
-    public void putAllValues(Map map) {
-        Set<Map.Entry> entrySet = map.entrySet();
+    public void putAllValues(Map<K,V> map) {
+        Set<Map.Entry<K,V>> entrySet = map.entrySet();
         entrySet.forEach(entry -> {
-            put(entry.getKey(),entry.getValue());
+            super.put(entry.getKey(),entry.getValue());
         });
     }
 

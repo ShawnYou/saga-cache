@@ -6,15 +6,15 @@ import java.util.Map;
 /**
  *
  */
-public interface InnerCache {
+public interface InnerCache<K,V> {
 
-    Object getValue(Object key);
+    V getValue(K key);
 
     Map getAllValues(Collection keys);
 
-    void putValue(Object key,Object value);
+    V putValue(K key,V value);
 
-    void putAllValues(Map map);
+    void putAllValues(Map<K,V> map);
 
     void removeAllValues(Collection keys);
 }
