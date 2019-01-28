@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/smart-cache-configuration/smart-cache-configuration.iml" filepath="$PROJECT_DIR$/smart-cache-configuration/smart-cache-configuration.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart-cache-core/smart-cache-core.iml" filepath="$PROJECT_DIR$/smart-cache-core/smart-cache-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart-cache-parent.iml" filepath="$PROJECT_DIR$/smart-cache-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
