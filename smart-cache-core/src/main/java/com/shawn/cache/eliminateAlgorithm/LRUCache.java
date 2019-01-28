@@ -1,13 +1,14 @@
 package com.shawn.cache.eliminateAlgorithm;
 
-import com.ysl.core.InnerCache;
+
+import com.shawn.cache.InnerCache;
 
 import java.util.*;
 
 /**
  *  local cache about LRU
  */
-public class LRUCache<K,V> extends LinkedHashMap<K,V> implements InnerCache<K,V>{
+public class LRUCache<K,V> extends LinkedHashMap<K,V> implements InnerCache<K,V> {
     private int capacity;
 
     public LRUCache(int capacity){

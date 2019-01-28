@@ -3,5 +3,5 @@ package com.shawn.cache;
 /**
  * Abstract external cache
  */
-public class AbstractExternalJapCache extends AbstractJpaCache{
+public abstract class AbstractExternalJapCache extends AbstractJpaCache{
 }

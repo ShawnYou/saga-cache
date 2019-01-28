@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- *
+ * local cache interface
  */
 public interface InnerCache<K,V> {
 
