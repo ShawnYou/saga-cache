@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="smart-cache-configuration" />
+        <module name="smart-cache-context" />
         <module name="smart-cache-core" />
         <module name="test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="smart-cache-configuration" target="1.8" />
+      <module name="smart-cache-context" target="1.8" />
       <module name="smart-cache-core" target="1.8" />
       <module name="smart-cache-parent" target="1.8" />
       <module name="test" target="1.8" />

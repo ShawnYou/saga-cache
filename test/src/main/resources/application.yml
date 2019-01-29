@@ -1,5 +1,6 @@
 smart-cache:
-    local:
+    remote:
         redis:
-           server: http://localhost
-           port: 6379
+            server: http://localhost
+            port: 6379
+    local:
