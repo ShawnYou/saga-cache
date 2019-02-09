@@ -11,7 +11,7 @@
 
     <modules>
         <module>smart-cache-core</module>
-        <module>smart-cache-configuration</module>
+        <module>smart-cache-context</module>
     </modules>
 
 

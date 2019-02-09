@@ -22,8 +22,7 @@ public abstract class AbstractJpaCache implements JpaCache{
 
     @Override
     public boolean remove(Object key) {
-        //TODO
-        return false;
+        return removeCache(key);
     }
 
     @Override

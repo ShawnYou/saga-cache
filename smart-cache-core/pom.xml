@@ -40,6 +40,13 @@
             <version>2.9.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>2.1.4.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <artifactId>smart-cache-core</artifactId>

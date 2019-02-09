@@ -1,9 +1,6 @@
 package com.shawn.cache.eliminateAlgorithm;
 
 import com.shawn.cache.InnerCache;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -16,6 +13,7 @@ import java.util.Map;
  *  //TODO 并发情况（？）
  */
 public class LFUCache<K,V> extends HashMap<K,V> implements InnerCache<K,V> {
+
     private static final int DEFAULT_CAPACITY = 5;
 
     private static final int MAX_SIZE = 3;
@@ -51,6 +49,7 @@ public class LFUCache<K,V> extends HashMap<K,V> implements InnerCache<K,V> {
 
     @Override
     public Map getAllValues(Collection keys) {
+        HitRate hitRate = new HitRate(1,);
         //TODO
         return null;
     }
@@ -79,18 +78,50 @@ public class LFUCache<K,V> extends HashMap<K,V> implements InnerCache<K,V> {
         //TODO
     }
 
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
     class HitRate implements Comparable<HitRate>{
+
         private K key;
+
         private Integer hitCount;
+
         private Long time;
+
+        public HitRate(K key, Integer hitCount, Long time) {
+            this.key = key;
+            this.hitCount = hitCount;
+            this.time = time;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public void setKey(K key) {
+            this.key = key;
+        }
+
+        public Integer getHitCount() {
+            return hitCount;
+        }
+
+        public void setHitCount(Integer hitCount) {
+            this.hitCount = hitCount;
+        }
+
+        public Long getTime() {
+            return time;
+        }
+
+        public void setTime(Long time) {
+            this.time = time;
+        }
 
         @Override
         public int compareTo(HitRate o) {
+
             int ret = hitCount.compareTo(o.getHitCount());
             return ret!=0 ? ret:time.compareTo(o.getTime());
         }
+
     }
 }
