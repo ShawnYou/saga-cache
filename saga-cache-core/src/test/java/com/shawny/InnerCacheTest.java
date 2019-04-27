@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.*;
@@ -40,5 +39,18 @@ public class InnerCacheTest {
 
         Map<String,Object> map = lruCache.getAllValues(Arrays.asList("name","age"));
         assertTrue(map.size() == 2);
+    }
+
+    @Test
+    public void shoudReturnTureWhenRemoveACache(){
+        String inputName = "tom";
+        Integer inputAge = 11;
+        lruCache.put("name",inputName);
+        lruCache.put("age",inputAge);
+
+        lruCache.remove("name");
+
+        Object object = lruCache.get("age");
+        assertTrue(object!=null);
     }
 }
