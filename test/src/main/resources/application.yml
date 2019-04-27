@@ -1,7 +1,0 @@
-smart-cache:
-    remote:
-        redis:
-            server: 127.0.0.1
-            port: 6379
-    local:
-        method: LRU
