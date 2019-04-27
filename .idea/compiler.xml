@@ -6,6 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="saga-cache-configuration" />
+        <module name="saga-cache-core" />
+        <module name="saga-cache-test" />
         <module name="smart-cache-configuration" />
         <module name="smart-cache-context" />
         <module name="smart-cache-core" />
@@ -13,6 +16,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="saga-cache" target="1.7" />
+      <module name="saga-cache-configuration" target="1.7" />
+      <module name="saga-cache-core" target="1.7" />
+      <module name="saga-cache-test" target="1.7" />
       <module name="smart-cache-configuration" target="1.5" />
       <module name="smart-cache-context" target="1.5" />
       <module name="smart-cache-core" target="1.5" />

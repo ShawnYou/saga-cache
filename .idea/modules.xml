@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/saga-cache.iml" filepath="$PROJECT_DIR$/saga-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saga-cache-configuration/saga-cache-configuration.iml" filepath="$PROJECT_DIR$/saga-cache-configuration/saga-cache-configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saga-cache-core/saga-cache-core.iml" filepath="$PROJECT_DIR$/saga-cache-core/saga-cache-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saga-cache-test/saga-cache-test.iml" filepath="$PROJECT_DIR$/saga-cache-test/saga-cache-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart-cache-context/smart-cache-context.iml" filepath="$PROJECT_DIR$/smart-cache-context/smart-cache-context.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart-cache-core/smart-cache-core.iml" filepath="$PROJECT_DIR$/smart-cache-core/smart-cache-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart-cache-parent.iml" filepath="$PROJECT_DIR$/smart-cache-parent.iml" />
