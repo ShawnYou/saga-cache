@@ -16,15 +16,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="saga-cache" target="1.7" />
-      <module name="saga-cache-configuration" target="1.7" />
-      <module name="saga-cache-core" target="1.7" />
-      <module name="saga-cache-test" target="1.7" />
-      <module name="smart-cache-configuration" target="1.5" />
-      <module name="smart-cache-context" target="1.5" />
-      <module name="smart-cache-core" target="1.5" />
-      <module name="smart-cache-parent" target="1.5" />
-      <module name="test" target="1.5" />
+      <module name="saga-cache" target="1.8" />
+      <module name="saga-cache-configuration" target="1.8" />
+      <module name="saga-cache-core" target="1.8" />
+      <module name="saga-cache-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -12,39 +12,46 @@ public interface InnerCache<K,V> {
      * @param k
      * @return
      */
-    V put(K k);
+    V putValue(K k,V v);
 
     /**
      * get cache
      * @param k
      * @return
      */
-    V get(K k);
+    V getValue(K k);
 
     /**
      * remove cache by key
      * @param k
      * @return
      */
-    V remove(K k);
+    V removeValue(K k);
 
     /**
      * get all caches by keys
      * @param keys
      * @return
      */
-    Map<K,V> getAll(Collection keys);
+    Map<K,V> getAllValues(Collection<K> keys);
 
     /**
      * batch put cache
      * @param map
      */
-    void putAll(Map<K,V> map);
+    void putAllValues(Map<K,V> map);
 
     /**
      * remove all cache by keys
      * @param keys
      */
-    void removeAll(Collection keys);
+    void removeAllValues(Collection<K> keys);
+
+    /**
+     * remove eldest entry
+     * @param eldest
+     * @return
+     */
+    boolean removeEldestEntry(Map.Entry<K,V> eldest);
 
 }
