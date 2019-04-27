@@ -13,8 +13,11 @@ public class RedisConfig extends BasicConfig{
 
     @Bean
     public JedisConnectionFactory jedisConnectionFactory(){
-        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
 
+        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
+        jedisConnectionFactory.setHostName("127.0.0.1");
+        jedisConnectionFactory.setPort(6379);
+        return jedisConnectionFactory;
     }
 
 }

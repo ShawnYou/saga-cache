@@ -9,23 +9,18 @@ import java.util.Map;
  */
 public abstract class AbstractJpaCache implements JpaCache{
 
-    @Override
     public Object get(Object key) {
-        return getCache(key);
+        return null;
     }
 
-    @Override
     public void put(Object key, Object value) {
-        putCache(key,value);
-        //TODO
+
     }
 
-    @Override
     public boolean remove(Object key) {
-        return removeCache(key);
+        return false;
     }
 
-    @Override
     public void clear() {
 
     }
