@@ -42,4 +42,10 @@ public abstract class AbstractCache<K,V> implements Cache<K,V> {
     public boolean removeEldestEntry(Map.Entry<K, V> eldest) {
         return false;
     }
+
+    protected abstract V putCache(K k,V v);
+
+    protected abstract  V getCache(K k);
+
+    protected abstract V removeCache(K k);
 }
