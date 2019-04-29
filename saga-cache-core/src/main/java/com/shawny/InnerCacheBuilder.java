@@ -4,11 +4,15 @@ package com.shawny;
 /**
  * Created by shawn_lin on 2019/4/29.
  */
-public abstract class InnerCacheBuilder implements Builder{
-    @Override
-    public Cache createCache() {
-        return null;
+public class InnerCacheBuilder extends AbstractInnerCacheBuilder {
+    private InnerCache innerCache;
+
+    public InnerCacheBuilder(InnerCache innerCache){
+        this.innerCache = innerCache;
     }
 
-    public abstract Cache build();
+    @Override
+    protected Cache build() {
+        return innerCache;
+    }
 }

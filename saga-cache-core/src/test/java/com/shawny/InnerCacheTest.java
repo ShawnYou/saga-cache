@@ -1,5 +1,6 @@
 package com.shawny;
 
+import com.shawny.eliminateAlgorithm.FIFOCache;
 import com.shawny.eliminateAlgorithm.LRUCache;
 import org.junit.Before;
 import org.junit.Test;
@@ -56,6 +57,15 @@ public class InnerCacheTest {
 
     @Test
     public void shouldBuildCorrectCache(){
+        InnerCacheBuilder builder = new InnerCacheBuilder(new FIFOCache());
+        Cache cache = builder.createCache();
+        assertTrue(cache instanceof FIFOCache);
+    }
 
+    @Test
+    public void shouldBuildCorrectCache2(){
+        InnerCacheBuilder builder = new InnerCacheBuilder(new LRUCache());
+        Cache cache = builder.createCache();
+        assertTrue(cache instanceof LRUCache);
     }
 }
