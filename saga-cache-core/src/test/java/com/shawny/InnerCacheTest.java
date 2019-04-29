@@ -53,4 +53,9 @@ public class InnerCacheTest {
         Object object = lruCache.get("age");
         assertTrue(object!=null);
     }
+
+    @Test
+    public void shouldBuildCorrectCache(){
+
+    }
 }
