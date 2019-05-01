@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c95e686-6246-4bbb-8fe1-4cf831c708a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCacheBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/RedisCacheBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saga-cache-core/src/test/java/com/shawny/RedisCacheTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saga-cache-core/src/test/java/com/shawny/AppTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saga-cache-core/target/test-classes/com/shawny/AppTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractExternalCache.java" afterPath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCache.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/RedisCache.java" afterPath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/RedisCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractCache.java" afterPath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/CacheManager.java" afterPath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/CacheManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCache.java" afterPath="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCache.java" />
     </list>
     <ignored path="$PROJECT_DIR$/smart-cache-core/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,13 +24,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="InnerCache.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AbstractCache.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="33" />
+            <state relative-caret-position="198">
+              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +51,8 @@
       <file leaf-file-name="AbstractRemoteCache.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
+            <state relative-caret-position="198">
+              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="19" />
               <folding>
                 <element signature="e#190#191#0" expanded="true" />
                 <element signature="e#217#218#0" expanded="true" />
@@ -53,43 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisCache.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/RedisCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectCacheCode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/eliminateAlgorithm/SelectCacheCode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InnerCacheTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/test/java/com/shawny/InnerCacheTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1168">
-              <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AbstractInnerCacheBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractInnerCacheBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="220">
+              <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -99,11 +75,31 @@
         <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCacheBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="19" />
               <folding>
                 <element signature="e#171#172#0" expanded="true" />
                 <element signature="e#198#199#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CacheManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/CacheManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cache.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/Cache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,21 +114,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisCacheTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RedisCacheTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saga-cache-core/src/test/java/com/shawny/RedisCacheTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CacheManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/CacheManager.java">
+      <file leaf-file-name="InnerCacheBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCacheBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="154">
+              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -180,8 +176,6 @@
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/eliminateAlgorithm/FIFOCache.java" />
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/eliminateAlgorithm/LFUCache.java" />
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/Cache.java" />
-        <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCache.java" />
-        <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractCache.java" />
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractExternalCache.java" />
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/RedisCache.java" />
         <option value="$PROJECT_DIR$/saga-cache-configuration/src/main/java/com/shawny/configData.java" />
@@ -198,7 +192,10 @@
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCache.java" />
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCacheBuilder.java" />
         <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/RedisCacheBuilder.java" />
+        <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/CacheManager.java" />
         <option value="$PROJECT_DIR$/saga-cache-core/src/test/java/com/shawny/RedisCacheTest.java" />
+        <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractCache.java" />
+        <option value="$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCache.java" />
       </list>
     </option>
   </component>
@@ -1054,7 +1051,7 @@
       <workItem from="1556350006118" duration="5388000" />
       <workItem from="1556412615645" duration="6415000" />
       <workItem from="1556631571862" duration="994000" />
-      <workItem from="1556640086944" duration="1820000" />
+      <workItem from="1556640086944" duration="4164000" />
     </task>
     <servers />
   </component>
@@ -1088,7 +1085,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31557000" />
+    <option name="totallyTimeSpent" value="33901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1112,13 +1109,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16702355" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3425926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3425926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22269808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.248394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1257,13 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/Cache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saga-cache-core/saga-cache-core.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1282,13 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-configuration/src/main/java/com/shawny/configData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1335,37 +1318,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCacheBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-          <folding>
-            <element signature="e#222#223#0" expanded="false" />
-            <element signature="e#266#267#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1383,7 +1339,7 @@
         <state relative-caret-position="1168">
           <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1396,35 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractInnerCacheBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/RedisCache.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1433,14 +1360,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-configuration/src/main/java/com/shawny/configData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCacheBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="19" />
           <folding>
             <element signature="e#171#172#0" expanded="true" />
             <element signature="e#198#199#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractRemoteCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#190#191#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractInnerCacheBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/CacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/test/java/com/shawny/RedisCacheTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,10 +1422,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/test/java/com/shawny/RedisCacheTest.java">
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="63">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCacheBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/AbstractCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-cache-core/src/main/java/com/shawny/InnerCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
           <folding />
         </state>
       </provider>

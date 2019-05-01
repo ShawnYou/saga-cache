@@ -10,17 +10,17 @@ import java.util.Map;
 public abstract class AbstractCache<K,V> implements Cache<K,V> {
     @Override
     public V putValue(K k, V v) {
-        return null;
+        return this.PUT(k,v);
     }
 
     @Override
     public V getValue(K k) {
-        return null;
+        return this.GET(k);
     }
 
     @Override
     public V removeValue(K k) {
-        return null;
+        return this.REMOVE(k);
     }
 
     @Override
@@ -43,9 +43,9 @@ public abstract class AbstractCache<K,V> implements Cache<K,V> {
         return false;
     }
 
-    protected abstract V putCache(K k,V v);
+    protected abstract V PUT(K k,V v);
 
-    protected abstract  V getCache(K k);
+    protected abstract  V GET(K k);
 
-    protected abstract V removeCache(K k);
+    protected abstract V REMOVE(K k);
 }
