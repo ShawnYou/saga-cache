@@ -3,7 +3,7 @@ package com.shawny;
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public class AbstractExternalCache extends AbstractCache {
+public class AbstractRemoteCache extends AbstractCache {
 
     @Override
     protected Object putCache(Object o, Object o2) {
