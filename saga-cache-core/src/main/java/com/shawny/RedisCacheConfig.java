@@ -6,7 +6,7 @@ import redis.clients.jedis.util.Pool;
 /**
  * Created by shawn_lin on 2019/5/5.
  */
-public class RedisCacheConfig extends Config{
+public class RedisCacheConfig {
     private Pool<Jedis> jedisPool;
 
     public Pool<Jedis> getJedisPool(){
