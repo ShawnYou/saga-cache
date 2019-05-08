@@ -12,6 +12,7 @@
     <module>saga-cache-core</module>
     <module>saga-cache-configuration</module>
     <module>saga-cache-test</module>
+      <module>saga-cache-annotation</module>
   </modules>
 
   <name>saga-cache</name>
