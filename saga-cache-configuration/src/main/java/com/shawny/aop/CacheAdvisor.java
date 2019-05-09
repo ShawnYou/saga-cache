@@ -9,6 +9,7 @@ import org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor;
 public class CacheAdvisor extends AbstractBeanFactoryPointcutAdvisor{
     @Override
     public Pointcut getPointcut() {
-        return null;
+        CachePointCut pointCut = new CachePointCut();
+        return pointCut;
     }
 }
