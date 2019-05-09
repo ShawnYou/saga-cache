@@ -16,12 +16,7 @@ public class SagaCacheInterceptor implements MethodInterceptor {
     @Override
     public Object invoke(MethodInvocation methodInvocation) throws Throwable {
         Method method = methodInvocation.getMethod();
-        /*try {
-            return methodInvocation.proceed();
-        }catch (Throwable throwable){
-            throw throwable;
-        }*/
-
+        
         try {
             return this.execute(methodInvocation,method,methodInvocation.getArguments(),methodInvocation.getThis());
         }catch (Throwable throwable){
