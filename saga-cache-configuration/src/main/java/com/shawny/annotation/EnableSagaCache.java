@@ -1,6 +1,7 @@
 package com.shawny.annotation;
 
 import com.shawny.configuration.SagaCacheSeletor;
+import org.springframework.context.annotation.AdviceMode;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
@@ -15,4 +16,9 @@ import java.lang.annotation.*;
 @Documented
 @Import(SagaCacheSeletor.class)
 public @interface EnableSagaCache {
+    boolean proxyTargetClass() default false;
+
+    AdviceMode mode() default AdviceMode.PROXY;
+
+    int order() default 2147483647;
 }
