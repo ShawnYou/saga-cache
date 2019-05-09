@@ -10,8 +10,8 @@ import java.util.List;
 /**
  * Created by shawn_lin on 2019/5/9.
  */
-public class SagaCacheSeletor extends AdviceModeImportSelector<EnableSagaCache>{
-    public SagaCacheSeletor(){
+public class SagaCacheSelector extends AdviceModeImportSelector<EnableSagaCache>{
+    public SagaCacheSelector(){
     }
 
     @Override

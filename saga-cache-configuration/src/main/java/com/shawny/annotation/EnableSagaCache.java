@@ -1,6 +1,6 @@
 package com.shawny.annotation;
 
-import com.shawny.configuration.SagaCacheSeletor;
+import com.shawny.configuration.SagaCacheSelector;
 import org.springframework.context.annotation.AdviceMode;
 import org.springframework.context.annotation.Import;
 
@@ -14,7 +14,7 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Inherited
 @Documented
-@Import(SagaCacheSeletor.class)
+@Import(SagaCacheSelector.class)
 public @interface EnableSagaCache {
     boolean proxyTargetClass() default false;
 
