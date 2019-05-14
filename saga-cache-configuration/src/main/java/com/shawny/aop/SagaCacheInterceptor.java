@@ -2,9 +2,9 @@ package com.shawny.aop;
 
 
 
-import org.aopalliance.intercept.Invocation;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
+import org.springframework.util.ClassUtils;
 
 import java.lang.reflect.Method;
 
@@ -25,7 +25,10 @@ public class SagaCacheInterceptor implements MethodInterceptor {
 
     }
 
-    private Object execute(Invocation invocation,Method method,Object[] args,Object target){
+    private Object execute(MethodInvocation invocation,Method method,Object[] args,Object target){
+        Object object = invocation.getThis();
+        Class<?> targetClass = target.getClass();
+        ClassUtils.getMostSpecificMethod(method,targetClass);
         return null;
     }
 }
