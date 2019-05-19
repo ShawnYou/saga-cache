@@ -1,19 +1,28 @@
 package com.shawny;
 
 import com.shawny.configuration.CacheConfigAutoInit;
-import com.shawny.util.SpringContextHelper;
+import com.shawny.configuration.SagaCacheAutoConfiguration;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * Created by shawn_lin on 2019/5/18.
  */
-public class AutoInitTest{
+
+public class AutoInitTest {
 
 
     @Test
-    public void shouldGenerateBeanWhenStart(){
-        CacheConfigAutoInit configAutoInit = (CacheConfigAutoInit)SpringContextHelper.getContext().getBean("CacheConfigAutoInit");
+    public void shouldInjectBeanWhenProjectStart(){
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+        ctx.register(SagaCacheAutoConfiguration.class);
+        ctx.refresh();
+        CacheConfigAutoInit configAutoInit = ctx.getBean(CacheConfigAutoInit.class);
         Assert.assertTrue(configAutoInit!=null);
     }
+
+    @Test
+    public void should
+
 }

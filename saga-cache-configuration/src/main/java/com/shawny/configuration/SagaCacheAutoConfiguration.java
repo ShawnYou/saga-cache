@@ -27,10 +27,15 @@ public class SagaCacheAutoConfiguration implements ImportAware{
     @Bean
     public CacheAdvisor sagaCacheAdvisor(){
         CacheInterceptor interceptor = new CacheInterceptor();
-
         CacheAdvisor advisor = new CacheAdvisor();
         advisor.setAdvice(interceptor);
-
         return advisor;
     }
+
+    @Bean
+    public CacheConfigAutoInit configAutoInit(){
+        CacheConfigAutoInit configAutoInit = new CacheConfigAutoInit();
+        return configAutoInit;
+    }
+
 }
