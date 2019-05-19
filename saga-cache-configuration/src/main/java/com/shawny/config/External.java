@@ -1,12 +1,14 @@
 package com.shawny.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by shawn_lin on 2019/5/19.
  */
 @Component
+@PropertySource("application.yml")
 @ConfigurationProperties(prefix = "saga-cache.external")
 public class External {
     private String type;
