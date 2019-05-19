@@ -1,0 +1,7 @@
+saga-cache:
+     external:
+          changer: on
+          type: redis
+     interna:
+          changer: off
+          type: LRU

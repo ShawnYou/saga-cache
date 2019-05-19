@@ -1,5 +1,6 @@
 package com.shawny;
 
+import com.shawny.config.External;
 import com.shawny.configuration.CacheConfigAutoInit;
 import com.shawny.configuration.SagaCacheAutoConfiguration;
 import org.junit.Assert;
@@ -22,7 +23,13 @@ public class AutoInitTest {
         Assert.assertTrue(configAutoInit!=null);
     }
 
-    @Test
-    public void should
 
+    @Test
+    public void shouldMapToObjectWhenProjectStart(){
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+        ctx.register(SagaCacheAutoConfiguration.class);
+        ctx.refresh();
+        External external = ctx.getBean(External.class);
+        Assert.assertTrue(external !=null);
+    }
 }

@@ -2,6 +2,7 @@ package com.shawny.configuration;
 
 import com.shawny.annotation.EnableSagaCache;
 import com.shawny.aop.CacheAdvisor;
+import com.shawny.config.External;
 import org.springframework.cache.interceptor.CacheInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,6 +37,12 @@ public class SagaCacheAutoConfiguration implements ImportAware{
     public CacheConfigAutoInit configAutoInit(){
         CacheConfigAutoInit configAutoInit = new CacheConfigAutoInit();
         return configAutoInit;
+    }
+
+    @Bean
+    public External externalConfig(){
+        External external = new External();
+        return external;
     }
 
 }
