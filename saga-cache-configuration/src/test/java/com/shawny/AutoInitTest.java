@@ -30,6 +30,6 @@ public class AutoInitTest {
         ctx.register(SagaCacheAutoConfiguration.class);
         ctx.refresh();
         External external = ctx.getBean(External.class);
-        Assert.assertTrue(external !=null);
+        Assert.assertTrue(external.getChanger() !=null);
     }
 }
