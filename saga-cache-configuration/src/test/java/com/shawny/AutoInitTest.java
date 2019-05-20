@@ -1,8 +1,8 @@
 package com.shawny;
 
-import com.shawny.config.External;
+import com.shawny.config.ConfigMap;
+import com.shawny.configuration.AbstractCacheConfigAutoInit;
 import com.shawny.configuration.CacheConfigAutoInit;
-import com.shawny.configuration.ExternalCacheConfigAutoInit;
 import com.shawny.configuration.SagaCacheAutoConfiguration;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class AutoInitTest {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(SagaCacheAutoConfiguration.class);
         ctx.refresh();
-        CacheConfigAutoInit configAutoInit = ctx.getBean(CacheConfigAutoInit.class);
+        AbstractCacheConfigAutoInit configAutoInit = ctx.getBean(AbstractCacheConfigAutoInit.class);
         Assert.assertTrue(configAutoInit!=null);
     }
 
@@ -28,10 +28,10 @@ public class AutoInitTest {
     @Test
     public void shouldMapToObjectWhenProjectStart(){
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        ctx.register(ExternalCacheConfigAutoInit.class);
+        ctx.register(CacheConfigAutoInit.class);
         ctx.refresh();
-        External external = ctx.getBean(External.class);
-        Assert.assertTrue(external.getChanger() !=null);
+        ConfigMap configMap = ctx.getBean(ConfigMap.class);
+        Assert.assertTrue(configMap.getExternal().getChanger() !=null);
     }
 
 
