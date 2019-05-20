@@ -35,7 +35,6 @@ public class SagaCacheInterceptor implements MethodInterceptor {
         Method specificMethod = ClassUtils.getMostSpecificMethod(method,targetClass);
         specificMethod = BridgeMethodResolver.findBridgedMethod(specificMethod);
         Collection<CachePut> cachePuts = AnnotatedElementUtils.findAllMergedAnnotations(specificMethod, CachePut.class);
-        //Collection<CachePut> cachePuts = AnnotatedElementUtils.findAllMergedAnnotations(specificMethod, );
         return null;
     }
 }

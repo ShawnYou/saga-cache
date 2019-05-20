@@ -34,5 +34,13 @@ public class AutoInitTest {
         Assert.assertTrue(configMap.getExternal().getChanger() !=null);
     }
 
+    @Test
+    public void shouldGetCacheBuilderMapWhenProjectStart(){
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+        ctx.register(CacheConfigAutoInit.class);
+        ctx.refresh();
+        ConfigMap configMap = ctx.getBean(ConfigMap.class);
+    }
+
 
 }

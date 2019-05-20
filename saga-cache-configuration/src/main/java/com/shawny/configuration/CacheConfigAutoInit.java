@@ -17,7 +17,7 @@ public class CacheConfigAutoInit extends AbstractCacheConfigAutoInit {
         super(context);
     }
 
-    @Bean
+    /*@Bean
     public External externalConfig(){
         External external = new External();
         external.setChanger("1");
@@ -39,5 +39,5 @@ public class CacheConfigAutoInit extends AbstractCacheConfigAutoInit {
         configMap.setExternal(externalConfig());
         configMap.setInternal(internalConfig());
         return configMap;
-    }
+    }*/
 }

@@ -1,7 +1,7 @@
 package com.shawny.configuration;
 
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
 
 import javax.annotation.PostConstruct;
 
@@ -10,11 +10,7 @@ import javax.annotation.PostConstruct;
  */
 public abstract class AbstractCacheConfigAutoInit {
 
-    protected ApplicationContext applicationContext;
-
-    public AbstractCacheConfigAutoInit(ApplicationContext context){
-        this.applicationContext = context;
-    }
+    private ConfigurableEnvironment environment;
 
     @PostConstruct
     public void autoInit(){
