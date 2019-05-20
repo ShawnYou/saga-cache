@@ -1,6 +1,7 @@
 package com.shawny.configuration;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 import javax.annotation.PostConstruct;
@@ -10,11 +11,13 @@ import javax.annotation.PostConstruct;
  */
 public abstract class AbstractCacheConfigAutoInit {
 
+    @Autowired
     private ConfigurableEnvironment environment;
 
     @PostConstruct
     public void autoInit(){
-        System.out.println("xxx");
+
+
     }
 
 }
