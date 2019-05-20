@@ -42,10 +42,4 @@ public class SagaCacheAutoConfiguration implements ImportAware,ApplicationContex
         return advisor;
     }
 
-    @Bean
-    public CacheConfigAutoInit configAutoInit(){
-        CacheConfigAutoInit configAutoInit = new CacheConfigAutoInit();
-        return configAutoInit;
-    }
-
 }

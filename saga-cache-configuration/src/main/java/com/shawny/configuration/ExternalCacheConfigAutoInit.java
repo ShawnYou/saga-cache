@@ -18,8 +18,8 @@ public class ExternalCacheConfigAutoInit extends CacheConfigAutoInit{
     @Bean
     public External externalConfig(){
         External external = new External();
-        external.setChanger(null);
-        external.setType(null);
+        external.setChanger("1");
+        external.setType("2");
         return external;
     }
 }
