@@ -1,14 +1,12 @@
 package com.shawny.config;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * Created by shawn_lin on 2019/5/19.
  */
-@Setter
-@Getter
+@Data
 public class External {
     private String type;
     private String changer;

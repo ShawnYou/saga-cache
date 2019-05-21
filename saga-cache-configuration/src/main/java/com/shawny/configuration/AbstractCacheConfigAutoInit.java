@@ -22,6 +22,7 @@ public abstract class AbstractCacheConfigAutoInit {
 
     public void process(ConfigurableEnvironment environment){
         environment.getPropertySources();
+        boolean flag = environment.containsProperty("saga-cache");
         ConfigurationParser parser = new ConfigurationParser(environment);
     }
 
