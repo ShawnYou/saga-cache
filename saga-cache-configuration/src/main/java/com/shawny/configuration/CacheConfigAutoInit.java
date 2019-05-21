@@ -1,10 +1,5 @@
 package com.shawny.configuration;
 
-import com.shawny.config.ConfigMap;
-import com.shawny.config.External;
-import com.shawny.config.Internal;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -12,10 +7,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class CacheConfigAutoInit extends AbstractCacheConfigAutoInit {
-
-    public CacheConfigAutoInit(ApplicationContext context){
-        super(context);
-    }
 
     /*@Bean
     public External externalConfig(){
