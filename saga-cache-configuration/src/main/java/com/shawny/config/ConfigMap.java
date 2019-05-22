@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Data
 @Component
-@ConfigurationProperties("saga-cache")
+@ConfigurationProperties(prefix = "saga-cache")
 public class ConfigMap {
     private External external;
     private Internal internal;
