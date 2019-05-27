@@ -16,16 +16,16 @@ public abstract class AbstractCacheConfigAutoInit {
     private ConfigurableEnvironment environment;
 
     @PostConstruct
-    public void autoInit(){
-        this.process(environment);
+    public void autoInit() {
+        this.doProcess(environment);
     }
 
-    public void process(ConfigurableEnvironment environment){
-        environment.getPropertySources();
-        boolean flag = environment.containsProperty("saga-cache");
+    public void doProcess(ConfigurableEnvironment environment) {
+        boolean test = environment.containsProperty("saga-cache");
         ConfigurationParser parser = new ConfigurationParser(environment);
-    }
+        
 
+    }
 
 
 }

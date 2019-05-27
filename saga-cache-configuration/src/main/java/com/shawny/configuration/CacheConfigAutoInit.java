@@ -12,7 +12,6 @@ import org.springframework.core.env.ConfigurableEnvironment;
  * Created by shawn_lin on 2019/5/20.
  */
 @Configuration
-/*@PropertySource(value = "classpath:/application.yml",factory = YmalPropertyLoadFactory.class)*/
 public class CacheConfigAutoInit extends AbstractCacheConfigAutoInit {
 
     @Autowired
