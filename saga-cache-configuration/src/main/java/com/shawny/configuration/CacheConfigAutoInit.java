@@ -1,6 +1,6 @@
 package com.shawny.configuration;
 
-import com.shawny.config.ConfigMap;
+import com.shawny.config.SagaCacheConfig;
 import com.shawny.config.External;
 import com.shawny.config.Internal;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +34,10 @@ public class CacheConfigAutoInit extends AbstractCacheConfigAutoInit {
     }
 
     @Bean
-    public ConfigMap configMap(){
-        ConfigMap configMap = new ConfigMap();
-        configMap.setExternal(externalConfig());
-        configMap.setInternal(internalConfig());
-        return configMap;
+    public SagaCacheConfig configMap(){
+        SagaCacheConfig sagaCacheConfig = new SagaCacheConfig();
+        sagaCacheConfig.setExternal(externalConfig());
+        sagaCacheConfig.setInternal(internalConfig());
+        return sagaCacheConfig;
     }
 }
