@@ -1,5 +1,7 @@
 package com.shawny;
 
+import com.shawny.config.External;
+import com.shawny.config.Internal;
 import com.shawny.config.SagaCacheConfig;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,15 +17,27 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = {AutoInitConfiguration.class})
 public class AutoInitTest {
 
+    private SagaCacheConfig cacheConfig;
+
     @Before
     public void init(){
-        SagaCacheConfig cacheConfig = new SagaCacheConfig();
+        cacheConfig = new SagaCacheConfig();
+        External external = new External();
+        external.setChanger("T");
+        external.setType("redis");
+
+        Internal internal = new Internal();
+        internal.setType("HashMap");
+        internal.setChanger("T");
+
+        cacheConfig.setExternal(external);
+        cacheConfig.setInternal(internal);
 
     }
 
     @Test
-    public void test(){
-
+    public void should_get_external_cache_when_project_init(){
+        External external = cacheConfig.getExternal();
     }
 
 
