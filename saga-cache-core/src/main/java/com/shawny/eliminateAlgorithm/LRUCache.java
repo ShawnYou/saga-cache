@@ -1,6 +1,6 @@
 package com.shawny.eliminateAlgorithm;
 
-import com.shawny.InnerCache;
+import org.springframework.cache.Cache;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ import java.util.*;
  *
  * TODO 并发
  */
-public class LRUCache<K,V> extends LinkedHashMap<K,V> implements InnerCache<K,V> {
+public class LRUCache<K,V> extends LinkedHashMap<K,V> implements Cache {
 
     static final int DEFAULT_CAPACITY = 1 << 4;
 
