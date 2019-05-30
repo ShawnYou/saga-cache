@@ -10,4 +10,9 @@ import lombok.Data;
 public class External {
     private String type;
     private String changer;
+    private String port;
+    private String maxTotal;
+    private String maxWaitMillis;
+    private String maxIdle;
+    private String host;
 }

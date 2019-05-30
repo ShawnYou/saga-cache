@@ -3,6 +3,7 @@ package com.shawny;
 import com.shawny.config.External;
 import com.shawny.config.Internal;
 import com.shawny.config.SagaCacheConfig;
+import com.shawny.core.RedisCache;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +26,10 @@ public class AutoInitTest {
         External external = new External();
         external.setChanger("T");
         external.setType("redis");
+        external.setHost("127.0.0.1");
+        external.setPort("6379");
+        external.setMaxIdle("2");
+        external.setMaxTotal("10");
 
         Internal internal = new Internal();
         internal.setType("HashMap");
@@ -36,9 +41,11 @@ public class AutoInitTest {
     }
 
     @Test
-    public void should_get_external_cache_when_project_init(){
+    public void should_get_redis_cache(){
         External external = cacheConfig.getExternal();
         RedisCache redisCache = new RedisCache(external);
+
+
 
     }
 
