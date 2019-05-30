@@ -1,51 +1,56 @@
 package com.shawny;
 
 
-import java.util.Collection;
-import java.util.Map;
+import java.util.concurrent.Callable;
 
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public abstract class AbstractCache<K,V> implements Cache<K,V> {
-    @Override
-    public V putValue(K k, V v) {
-        return this.PUT(k,v);
-    }
+public abstract class AbstractCache<K,V> implements org.springframework.cache.Cache{
+
 
     @Override
-    public V getValue(K k) {
-        return this.GET(k);
-    }
-
-    @Override
-    public V removeValue(K k) {
-        return this.REMOVE(k);
-    }
-
-    @Override
-    public Map<K, V> getAllValues(Collection<K> keys) {
+    public String getName() {
         return null;
     }
 
     @Override
-    public void putAllValues(Map<K, V> map) {
+    public Object getNativeCache() {
+        return null;
+    }
+
+    @Override
+    public ValueWrapper get(Object o) {
+        return null;
+    }
+
+    @Override
+    public <T> T get(Object o, Class<T> aClass) {
+        return null;
+    }
+
+    @Override
+    public <T> T get(Object o, Callable<T> callable) {
+        return null;
+    }
+
+    @Override
+    public void put(Object o, Object o1) {
 
     }
 
     @Override
-    public void removeAllValues(Collection<K> keys) {
+    public ValueWrapper putIfAbsent(Object o, Object o1) {
+        return null;
+    }
+
+    @Override
+    public void evict(Object o) {
 
     }
 
     @Override
-    public boolean removeEldestEntry(Map.Entry<K, V> eldest) {
-        return false;
+    public void clear() {
+
     }
-
-    protected abstract V PUT(K k,V v);
-
-    protected abstract  V GET(K k);
-
-    protected abstract V REMOVE(K k);
 }

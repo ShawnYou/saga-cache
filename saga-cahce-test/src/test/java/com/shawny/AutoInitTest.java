@@ -38,6 +38,8 @@ public class AutoInitTest {
     @Test
     public void should_get_external_cache_when_project_init(){
         External external = cacheConfig.getExternal();
+        RedisCache redisCache = new RedisCache(external);
+
     }
 
 
