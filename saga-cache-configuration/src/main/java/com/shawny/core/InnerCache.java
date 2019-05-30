@@ -1,4 +1,4 @@
-package com.shawny;
+package com.shawny.core;
 
 
 import org.springframework.cache.Cache;

@@ -1,12 +1,14 @@
 package com.shawny;
 
 
+import org.springframework.cache.Cache;
+
 import java.util.concurrent.Callable;
 
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public abstract class AbstractCache<K,V> implements org.springframework.cache.Cache{
+public abstract class AbstractCache<K,V> implements Cache {
 
 
     @Override
