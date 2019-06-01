@@ -1,15 +1,5 @@
 package com.shawny;
 
-import com.shawny.eliminateAlgorithm.FIFOCache;
-import com.shawny.eliminateAlgorithm.LRUCache;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.Map;
-
-import static org.junit.Assert.*;
-
 /**
  * Created by shawn_lin on 2019/4/27.
  */

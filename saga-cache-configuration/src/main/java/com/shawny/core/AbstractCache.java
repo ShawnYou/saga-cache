@@ -63,7 +63,7 @@ public abstract class AbstractCache implements Cache{
 
     }
 
-    public abstract <T> T GET(Object key);
+    public abstract ValueWrapper GET(Object key);
 
     public abstract void PUT(Object key,Object value);
 }

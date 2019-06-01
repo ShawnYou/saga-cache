@@ -1,6 +1,7 @@
 package com.shawny.core;
 
 import com.shawny.config.RedisConfig;
+import org.springframework.cache.support.SimpleValueWrapper;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
@@ -16,10 +17,10 @@ public class RedisCache extends AbstractCache{
     }
 
     @Override
-    public <T> T GET(Object key) {
+    public ValueWrapper GET(Object key) {
         try(Jedis jedis = jedisPool.getResource()) {
             String ret = jedis.get(key.toString());
-            return (T)ret;
+            return ret!=null?new SimpleValueWrapper(ret):null;
         }catch (Exception e){
             throw new RuntimeException(String.format("get cache occurs exception,key:{}",key));
         }
