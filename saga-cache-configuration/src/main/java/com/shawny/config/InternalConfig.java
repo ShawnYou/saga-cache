@@ -9,4 +9,5 @@ import lombok.Data;
 public class InternalConfig {
     private String changer;
     private String type;
+    private String strategy;
 }

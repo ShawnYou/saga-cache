@@ -19,7 +19,7 @@ public class RedisCache extends AbstractCache{
     public CacheWrap GET(Object key) {
         try(Jedis jedis = jedisPool.getResource()) {
             String ret = jedis.get(key.toString());
-            return ret!=null?new DefaultCacheWrap(ret):null;
+            return ret!=null?new DefaultCacheWrap(ret):new DefaultCacheWrap(null);
         }catch (Exception e){
             throw new RuntimeException(String.format("get cache occurs exception,key:{}",key));
         }

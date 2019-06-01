@@ -48,8 +48,10 @@ public class RedisCacheTest {
     }
 
     @Test
-    public void should_batch_get_when_batch_put(){
-
+    public void should_return_true_when_delete_cache(){
+        cache.delete("age");
+        Object ret = cache.get("age").get();
+        Assert.assertTrue(ret == null);
     }
 
 

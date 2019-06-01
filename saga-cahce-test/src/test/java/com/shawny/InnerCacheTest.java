@@ -1,17 +1,30 @@
 package com.shawny;
 
+import com.shawny.config.ExternalConfig;
+import com.shawny.config.InternalConfig;
+import com.shawny.config.SagaCacheConfig;
+import com.shawny.core.RedisCacheBuilder;
+import org.junit.Before;
+
 /**
  * Created by shawn_lin on 2019/4/27.
  */
 public class InnerCacheTest {
-   /* private LRUCache lruCache = null;
 
     @Before
     public void init(){
-        lruCache = new LRUCache();
+        SagaCacheConfig cacheConfig = new SagaCacheConfig();
+
+        InternalConfig internal = new InternalConfig();
+        internal.setType("HashMap");
+        internal.setChanger("T");
+
+        cacheConfig.setInternalConfig(internal);
+
+        InnerCacheBuilder builder = new InnerCacheBuilder(cacheConfig);
     }
 
-    @Test
+    /*@Test
     public void shouldReturnResultWhenUseLruCache(){
         lruCache.put("111",222);
 
