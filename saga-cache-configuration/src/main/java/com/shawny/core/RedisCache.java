@@ -1,7 +1,6 @@
 package com.shawny.core;
 
 import com.shawny.config.RedisConfig;
-import org.springframework.cache.support.SimpleValueWrapper;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
@@ -35,6 +34,16 @@ public class RedisCache extends AbstractCache{
             }
         }catch (Exception e){
             throw new RuntimeException(String.format("cache put occurs error,key:%s value:%s",key.toString(),value.toString()));
+        }
+    }
+
+    @Override
+    public void DELETE(Object key) {
+        try(Jedis jedis = jedisPool.getResource()) {
+            jedis.del(key.toString());
+
+        }catch (Exception e){
+            throw new RuntimeException(String.format("cache put occurs error,key:%s",key.toString()));
         }
     }
 }

@@ -10,6 +10,8 @@ public interface Cache {
 
      void put(Object key,Object value);
 
+     void delete(Object key);
+
      @FunctionalInterface
      public interface CacheWrap {
          @Nullable

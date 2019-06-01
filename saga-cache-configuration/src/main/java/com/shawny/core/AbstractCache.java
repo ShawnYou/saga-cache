@@ -14,6 +14,10 @@ public abstract class AbstractCache implements Cache{
         this.configBase = configBase;
     }
 
+    @Override
+    public void delete(Object key) {
+        this.DELETE(key);
+    }
 
     @Override
     public CacheWrap get(Object key) {
@@ -28,4 +32,6 @@ public abstract class AbstractCache implements Cache{
     public abstract CacheWrap GET(Object key);
 
     public abstract void PUT(Object key,Object value);
+
+    public abstract void DELETE(Object key);
 }
