@@ -4,7 +4,6 @@ import com.shawny.config.ConfigBase;
 import com.shawny.config.ExternalConfig;
 import com.shawny.config.RedisConfig;
 import com.shawny.config.SagaCacheConfig;
-import org.springframework.cache.Cache;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -12,12 +11,18 @@ import redis.clients.jedis.JedisPoolConfig;
  * Created by shawn_lin on 2019/6/1.
  */
 public class RedisCacheBuilder extends AbstractBuilder{
-
     private RedisConfig redisConfig;
 
     public RedisCacheBuilder(SagaCacheConfig sagaCacheConfig){
         super(sagaCacheConfig);
+        this.redisConfig = getRedisConfig();
+        this.setCacheFunction(config-> new RedisCache((RedisConfig)config));
+    }
 
+    private RedisConfig getRedisConfig(){
+        RedisConfig redisConfig = new RedisConfig();
+        redisConfig.setJedisPool(getJedisPool());
+        return redisConfig;
     }
 
     @Override

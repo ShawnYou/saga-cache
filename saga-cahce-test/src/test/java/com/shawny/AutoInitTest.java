@@ -3,18 +3,16 @@ package com.shawny;
 import com.shawny.config.ExternalConfig;
 import com.shawny.config.InternalConfig;
 import com.shawny.config.SagaCacheConfig;
+import com.shawny.core.RedisCacheBuilder;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.cache.Cache;
 
 /**
  * Created by shawn_lin on 2019/5/28.
  */
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {AutoInitConfiguration.class})
 public class AutoInitTest {
 
     private SagaCacheConfig cacheConfig;
@@ -40,8 +38,10 @@ public class AutoInitTest {
     }
 
     @Test
-    public void should_get_redis_cache(){
-
+    public void should_get_redis_cache_instance(){
+        RedisCacheBuilder builder = new RedisCacheBuilder(cacheConfig);
+        Cache cache = builder.buildCache();
+        Assert.assertTrue(cache!=null);
     }
 
 

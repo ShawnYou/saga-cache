@@ -1,5 +1,6 @@
 package com.shawny.core;
 
+import com.shawny.config.ConfigBase;
 import com.shawny.config.SagaCacheConfig;
 import org.springframework.cache.Cache;
 import org.springframework.util.Assert;
@@ -10,11 +11,11 @@ import java.util.concurrent.Callable;
  * Created by shawn_lin on 2019/5/30.
  */
 public abstract class AbstractCache implements Cache{
-    private SagaCacheConfig config;
+    private ConfigBase configBase;
 
-    public AbstractCache(SagaCacheConfig config){
-        Assert.notNull(config,"cache config can not be null");
-        this.config = config;
+    public AbstractCache(ConfigBase configBase){
+        Assert.notNull(configBase,"cache config base can not be null");
+        this.configBase = configBase;
     }
 
     @Override

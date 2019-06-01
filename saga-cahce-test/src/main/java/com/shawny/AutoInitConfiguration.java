@@ -19,7 +19,7 @@ import java.util.Map;
 @Configuration
 public class AutoInitConfiguration {
 
-    @Bean
+    /*@Bean
     public Map<String,Object> properties() {
         PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
         YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
@@ -39,7 +39,7 @@ public class AutoInitConfiguration {
         Map<String,Object> map = new HashMap<>();
         map.put("11",2);
         return map;
-    }
+    }*/
 
 
 

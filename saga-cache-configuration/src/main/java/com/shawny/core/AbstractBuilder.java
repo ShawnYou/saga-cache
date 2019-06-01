@@ -9,7 +9,7 @@ import java.util.function.Function;
 /**
  * Created by shawn_lin on 2019/6/1.
  */
-public abstract class AbstractBuilder {
+public abstract class AbstractBuilder implements CacheBuilder{
 
     protected SagaCacheConfig sagaCacheConfig;
 
@@ -21,4 +21,14 @@ public abstract class AbstractBuilder {
 
     public abstract ConfigBase getConfig();
 
+    public void setCacheFunction(Function<ConfigBase,Cache> cacheFunction){
+        this.cacheFunction = cacheFunction;
+    }
+
+    @Override
+    public Cache buildCache() {
+        ConfigBase configBase = this.getConfig();
+        Cache cache = cacheFunction.apply(configBase);
+        return cache;
+    }
 }
