@@ -8,8 +8,8 @@ import java.util.Map;
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public class LFUCache implements Cache {
-    @Override
+public class LFUCache{
+    /*@Override
     public Object putValue(Object o, Object o2) {
         return null;
     }
@@ -42,5 +42,5 @@ public class LFUCache implements Cache {
     @Override
     public boolean removeEldestEntry(Map.Entry eldest) {
         return false;
-    }
+    }*/
 }

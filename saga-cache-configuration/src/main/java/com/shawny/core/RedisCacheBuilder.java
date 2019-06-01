@@ -1,6 +1,6 @@
 package com.shawny.core;
 
-import com.shawny.config.CacheConfig;
+import com.shawny.config.ConfigBase;
 import com.shawny.config.ExternalConfig;
 import com.shawny.config.RedisConfig;
 import com.shawny.config.SagaCacheConfig;
@@ -17,16 +17,12 @@ public class RedisCacheBuilder extends AbstractBuilder{
 
     public RedisCacheBuilder(SagaCacheConfig sagaCacheConfig){
         super(sagaCacheConfig);
+
     }
 
     @Override
-    public CacheConfig getConfig() {
+    public ConfigBase getConfig() {
         return redisConfig;
-    }
-
-    @Override
-    public Cache buildCache() {
-        return null;
     }
 
     private JedisPool getJedisPool(){
@@ -39,7 +35,8 @@ public class RedisCacheBuilder extends AbstractBuilder{
             config.setMaxWaitMillis(external.getMaxWaitMillis());
             config.setMaxTotal(external.getMaxTotal());
 
-            //jedisPool = new JedisPool(config,external.getHost(),external.getPort(),)
+            //
+            jedisPool = new JedisPool(config,external.getHost(),external.getPort());
         }catch (Exception e){
             e.printStackTrace();
         }

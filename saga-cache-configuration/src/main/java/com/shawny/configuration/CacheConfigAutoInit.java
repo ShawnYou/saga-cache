@@ -36,8 +36,8 @@ public class CacheConfigAutoInit extends AbstractCacheConfigAutoInit {
     @Bean
     public SagaCacheConfig configMap(){
         SagaCacheConfig sagaCacheConfig = new SagaCacheConfig();
-        sagaCacheConfig.setExternal(externalConfig());
-        sagaCacheConfig.setInternal(internalConfig());
+        sagaCacheConfig.setExternalConfig(externalConfig());
+        sagaCacheConfig.setInternalConfig(internalConfig());
         return sagaCacheConfig;
     }
 }

@@ -26,23 +26,22 @@ public class AutoInitTest {
         external.setChanger("T");
         external.setType("redis");
         external.setHost("127.0.0.1");
-        external.setPort("6379");
-        external.setMaxIdle("2");
-        external.setMaxTotal("10");
+        external.setPort(6379);
+        external.setMaxIdle(2);
+        external.setMaxTotal(10);
 
         InternalConfig internal = new InternalConfig();
         internal.setType("HashMap");
         internal.setChanger("T");
 
-        cacheConfig.setExternal(external);
-        cacheConfig.setInternal(internal);
+        cacheConfig.setExternalConfig(external);
+        cacheConfig.setInternalConfig(internal);
 
     }
 
     @Test
     public void should_get_redis_cache(){
-        ExternalConfig external = cacheConfig.getExternal();
-        RedisCacheBuilder redisBuilder = new RedisCacheBuilder();
+
     }
 
 

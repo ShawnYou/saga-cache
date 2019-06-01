@@ -8,9 +8,9 @@ import java.util.Map;
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public class FIFOCache implements Cache {
+public class FIFOCache {
 
-    @Override
+    /*@Override
     public Object putValue(Object o, Object o2) {
         return null;
     }
@@ -43,5 +43,5 @@ public class FIFOCache implements Cache {
     @Override
     public boolean removeEldestEntry(Map.Entry eldest) {
         return false;
-    }
+    }*/
 }

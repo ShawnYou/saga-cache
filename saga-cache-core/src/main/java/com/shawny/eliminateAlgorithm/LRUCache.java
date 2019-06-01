@@ -11,9 +11,9 @@ import java.util.*;
  *
  * TODO 并发
  */
-public class LRUCache<K,V> extends LinkedHashMap<K,V> implements Cache {
+public class LRUCache<K,V> extends LinkedHashMap<K,V> {
 
-    static final int DEFAULT_CAPACITY = 1 << 4;
+    /*static final int DEFAULT_CAPACITY = 1 << 4;
 
     static final float DEFAULT_LOAD_FACTORY = 0.75f;
 
@@ -78,5 +78,5 @@ public class LRUCache<K,V> extends LinkedHashMap<K,V> implements Cache {
             status = super.removeEldestEntry(eldest);
         }
         return status;
-    }
+    }*/
 }

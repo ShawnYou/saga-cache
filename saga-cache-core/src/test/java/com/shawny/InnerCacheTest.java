@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
  * Created by shawn_lin on 2019/4/27.
  */
 public class InnerCacheTest {
-    private LRUCache lruCache = null;
+   /* private LRUCache lruCache = null;
 
     @Before
     public void init(){
@@ -67,5 +67,5 @@ public class InnerCacheTest {
         InnerCacheBuilder builder = new InnerCacheBuilder(new LRUCache());
         Cache cache = builder.createCache();
         assertTrue(cache instanceof LRUCache);
-    }
+    }*/
 }
