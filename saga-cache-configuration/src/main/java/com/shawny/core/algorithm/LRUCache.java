@@ -1,8 +1,9 @@
-package com.shawny.eliminateAlgorithm;
+package com.shawny.core.algorithm;
 
-import org.springframework.cache.Cache;
 
-import java.util.*;
+import com.shawny.core.Cache;
+
+import java.util.LinkedHashMap;
 
 /**
  * Created by shawn_lin on 2019/4/27.
@@ -11,9 +12,10 @@ import java.util.*;
  *
  * TODO 并发
  */
-public class LRUCache<K,V> extends LinkedHashMap<K,V> {
+public class LRUCache<K,V> extends LinkedHashMap<K,V> implements Cache {
 
-    /*static final int DEFAULT_CAPACITY = 1 << 4;
+
+    static final int DEFAULT_CAPACITY = 1 << 4;
 
     static final float DEFAULT_LOAD_FACTORY = 0.75f;
 
@@ -29,30 +31,31 @@ public class LRUCache<K,V> extends LinkedHashMap<K,V> {
     }
 
     @Override
+    public CacheWrap getCache(Object key) {
+        return null;
+    }
+
+    @Override
+    public void putCache(Object key, Object value) {
+
+    }
+
+    @Override
+    public void deleteCache(Object key) {
+
+    }
+
+    /*@Override
     public void putAllValues(Map<K, V> map) {
         Set<Map.Entry<K,V>> entries = map.entrySet();
         entries.forEach(entry ->{
             super.put(entry.getKey(),entry.getValue());
         });
-    }
+    }*/
 
-    @Override
-    public V putValue(K key, V value) {
-        super.put(key,value);
-        return value;
-    }
 
-    @Override
-    public V getValue(K key) {
-        return super.get(key);
-    }
 
-    @Override
-    public V removeValue(K key) {
-        return super.remove(key);
-    }
-
-    @Override
+    /*@Override
     public Map<K, V> getAllValues(Collection<K> keys) {
         Map<K,V> retMap = new HashMap<>();
         keys.forEach(key ->{
@@ -69,9 +72,9 @@ public class LRUCache<K,V> extends LinkedHashMap<K,V> {
         keys.forEach(key->{
             super.remove(key);
         });
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean removeEldestEntry(Map.Entry<K, V> eldest) {
         boolean status = false;
         if(size()>capacity){

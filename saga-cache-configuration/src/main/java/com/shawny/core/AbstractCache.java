@@ -15,18 +15,18 @@ public abstract class AbstractCache implements Cache{
     }
 
     @Override
-    public void delete(Object key) {
-        this.DELETE(key);
-    }
-
-    @Override
-    public CacheWrap get(Object key) {
+    public CacheWrap getCache(Object key) {
         return this.GET(key);
     }
 
     @Override
-    public void put(Object key, Object value) {
+    public void putCache(Object key, Object value) {
         this.PUT(key,value);
+    }
+
+    @Override
+    public void deleteCache(Object key) {
+        this.DELETE(key);
     }
 
     public abstract CacheWrap GET(Object key);

@@ -1,15 +1,9 @@
-package com.shawny.eliminateAlgorithm;
-
-import org.springframework.cache.Cache;
-
-import java.util.Collection;
-import java.util.Map;
+package com.shawny.core.algorithm;
 
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public class FIFOCache {
-
+public class LFUCache{
     /*@Override
     public Object putValue(Object o, Object o2) {
         return null;

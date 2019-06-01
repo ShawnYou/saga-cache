@@ -42,15 +42,15 @@ public class RedisCacheTest {
 
     @Test
     public void should_get_redis_cache_instance(){
-        cache.put("age","11");
-        Object ret = cache.get("age").get();
+        cache.putCache("age","11");
+        Object ret = cache.getCache("age").get();
         Assert.assertTrue("11".equals(ret.toString()));
     }
 
     @Test
     public void should_return_true_when_delete_cache(){
-        cache.delete("age");
-        Object ret = cache.get("age").get();
+        cache.deleteCache("age");
+        Object ret = cache.getCache("age").get();
         Assert.assertTrue(ret == null);
     }
 

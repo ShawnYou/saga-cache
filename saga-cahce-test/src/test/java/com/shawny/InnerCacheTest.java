@@ -1,15 +1,18 @@
 package com.shawny;
 
-import com.shawny.config.ExternalConfig;
 import com.shawny.config.InternalConfig;
 import com.shawny.config.SagaCacheConfig;
-import com.shawny.core.RedisCacheBuilder;
+import com.shawny.core.Cache;
+import com.shawny.core.InnerCacheBuilder;
 import org.junit.Before;
+import org.junit.Test;
 
 /**
  * Created by shawn_lin on 2019/4/27.
  */
 public class InnerCacheTest {
+
+    private Cache cache;
 
     @Before
     public void init(){
@@ -22,6 +25,12 @@ public class InnerCacheTest {
         cacheConfig.setInternalConfig(internal);
 
         InnerCacheBuilder builder = new InnerCacheBuilder(cacheConfig);
+        cache = builder.buildCache();
+    }
+
+    @Test
+    public void should_put_value_into_cache(){
+
     }
 
     /*@Test
