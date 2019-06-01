@@ -17,10 +17,10 @@ public class RedisCache extends AbstractCache{
     }
 
     @Override
-    public ValueWrapper GET(Object key) {
+    public CacheWrap GET(Object key) {
         try(Jedis jedis = jedisPool.getResource()) {
             String ret = jedis.get(key.toString());
-            return ret!=null?new SimpleValueWrapper(ret):null;
+            return ret!=null?new DefaultCacheWrap(ret):null;
         }catch (Exception e){
             throw new RuntimeException(String.format("get cache occurs exception,key:{}",key));
         }

@@ -3,23 +3,23 @@ package com.shawny;
 import com.shawny.config.ExternalConfig;
 import com.shawny.config.InternalConfig;
 import com.shawny.config.SagaCacheConfig;
+import com.shawny.core.Cache;
 import com.shawny.core.RedisCacheBuilder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.cache.Cache;
 
 /**
  * Created by shawn_lin on 2019/5/28.
  */
 
-public class AutoInitTest {
+public class RedisCacheTest {
 
-    private SagaCacheConfig cacheConfig;
+    private Cache cache;
 
     @Before
     public void init(){
-        cacheConfig = new SagaCacheConfig();
+        SagaCacheConfig cacheConfig = new SagaCacheConfig();
         ExternalConfig external = new ExternalConfig();
         external.setChanger("T");
         external.setType("redis");
@@ -35,17 +35,21 @@ public class AutoInitTest {
         cacheConfig.setExternalConfig(external);
         cacheConfig.setInternalConfig(internal);
 
+        RedisCacheBuilder builder = new RedisCacheBuilder(cacheConfig);
+        cache = builder.buildCache();
+
     }
 
     @Test
     public void should_get_redis_cache_instance(){
-        RedisCacheBuilder builder = new RedisCacheBuilder(cacheConfig);
-        Cache cache = builder.buildCache();
-
-
         cache.put("age","11");
         Object ret = cache.get("age").get();
         Assert.assertTrue("11".equals(ret.toString()));
+    }
+
+    @Test
+    public void should_batch_get_when_batch_put(){
+
     }
 
 
