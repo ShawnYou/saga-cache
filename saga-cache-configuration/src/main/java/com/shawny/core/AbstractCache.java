@@ -44,8 +44,8 @@ public abstract class AbstractCache implements Cache{
     }
 
     @Override
-    public void put(Object o, Object o1) {
-
+    public void put(Object key, Object value) {
+        this.PUT(key,value);
     }
 
     @Override
@@ -64,4 +64,6 @@ public abstract class AbstractCache implements Cache{
     }
 
     public abstract <T> T GET(Object key);
+
+    public abstract void PUT(Object key,Object value);
 }

@@ -41,7 +41,11 @@ public class AutoInitTest {
     public void should_get_redis_cache_instance(){
         RedisCacheBuilder builder = new RedisCacheBuilder(cacheConfig);
         Cache cache = builder.buildCache();
-        Assert.assertTrue(cache!=null);
+
+
+        cache.put("age","11");
+        Object ret = cache.get("age").get();
+        Assert.assertTrue("11".equals(ret.toString()));
     }
 
 
