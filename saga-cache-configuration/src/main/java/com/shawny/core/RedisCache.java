@@ -1,6 +1,6 @@
 package com.shawny.core;
 
-import com.shawny.config.External;
+import com.shawny.config.ExternalConfig;
 import com.shawny.config.SagaCacheConfig;
 
 /**
@@ -8,9 +8,9 @@ import com.shawny.config.SagaCacheConfig;
  */
 public class RedisCache extends AbstractCache{
 
-    private External external;
+    private ExternalConfig external;
 
-    public RedisCache(SagaCacheConfig config, External external) {
+    public RedisCache(SagaCacheConfig config, ExternalConfig external) {
         super(config);
         this.external = external;
     }

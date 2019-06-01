@@ -1,8 +1,8 @@
 package com.shawny.configuration;
 
 import com.shawny.config.SagaCacheConfig;
-import com.shawny.config.External;
-import com.shawny.config.Internal;
+import com.shawny.config.ExternalConfig;
+import com.shawny.config.InternalConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,16 +18,16 @@ public class CacheConfigAutoInit extends AbstractCacheConfigAutoInit {
     private ConfigurableEnvironment environment;
 
     @Bean
-    public External externalConfig(){
-        External external = new External();
+    public ExternalConfig externalConfig(){
+        ExternalConfig external = new ExternalConfig();
         external.setChanger("1");
         external.setType("2");
         return external;
     }
 
     @Bean
-    public Internal internalConfig(){
-        Internal internal = new Internal();
+    public InternalConfig internalConfig(){
+        InternalConfig internal = new InternalConfig();
         internal.setChanger("1");
         internal.setType("11");
         return internal;

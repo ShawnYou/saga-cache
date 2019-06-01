@@ -1,9 +1,8 @@
 package com.shawny;
 
-import com.shawny.config.External;
-import com.shawny.config.Internal;
+import com.shawny.config.ExternalConfig;
+import com.shawny.config.InternalConfig;
 import com.shawny.config.SagaCacheConfig;
-import com.shawny.core.RedisCache;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +22,7 @@ public class AutoInitTest {
     @Before
     public void init(){
         cacheConfig = new SagaCacheConfig();
-        External external = new External();
+        ExternalConfig external = new ExternalConfig();
         external.setChanger("T");
         external.setType("redis");
         external.setHost("127.0.0.1");
@@ -31,7 +30,7 @@ public class AutoInitTest {
         external.setMaxIdle("2");
         external.setMaxTotal("10");
 
-        Internal internal = new Internal();
+        InternalConfig internal = new InternalConfig();
         internal.setType("HashMap");
         internal.setChanger("T");
 
@@ -42,11 +41,8 @@ public class AutoInitTest {
 
     @Test
     public void should_get_redis_cache(){
-        External external = cacheConfig.getExternal();
-        RedisCache redisCache = new RedisCache(external);
-
-
-
+        ExternalConfig external = cacheConfig.getExternal();
+        RedisCacheBuilder redisBuilder = new RedisCacheBuilder();
     }
 
 
