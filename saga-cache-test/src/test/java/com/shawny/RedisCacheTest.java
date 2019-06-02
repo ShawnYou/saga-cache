@@ -1,10 +1,10 @@
 package com.shawny;
 
-import com.shawny.config.ExternalConfig;
-import com.shawny.config.InternalConfig;
-import com.shawny.config.SagaCacheConfig;
-import com.shawny.core.Cache;
-import com.shawny.core.RedisCacheBuilder;
+import com.shawny.sagacache.config.ExternalConfig;
+import com.shawny.sagacache.config.InternalConfig;
+import com.shawny.sagacache.config.SagaCacheConfig;
+import com.shawny.sagacache.core.Cache;
+import com.shawny.sagacache.core.RedisCacheBuilder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
