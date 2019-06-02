@@ -4,6 +4,7 @@ import com.shawny.config.InternalConfig;
 import com.shawny.config.SagaCacheConfig;
 import com.shawny.core.Cache;
 import com.shawny.core.InnerCacheBuilder;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,6 +22,7 @@ public class InnerCacheTest {
         InternalConfig internal = new InternalConfig();
         internal.setType("HashMap");
         internal.setChanger("T");
+        internal.setStrategy("LRU");
 
         cacheConfig.setInternalConfig(internal);
 
@@ -30,7 +32,9 @@ public class InnerCacheTest {
 
     @Test
     public void should_put_value_into_cache(){
-
+        cache.putCache("address","1111");
+        Object address = cache.getCache("address").get();
+        Assert.assertTrue("1111".equals(address.toString()));
     }
 
     /*@Test

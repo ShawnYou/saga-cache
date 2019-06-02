@@ -5,10 +5,10 @@ import org.springframework.lang.Nullable;
 /**
  * Created by shawn_lin on 2019/6/1.
  */
-public interface Cache {
+public interface Cache<K,V> {
      CacheWrap getCache(Object key);
 
-     void putCache(Object key,Object value);
+     void putCache(K key,V value);
 
      void deleteCache(Object key);
 

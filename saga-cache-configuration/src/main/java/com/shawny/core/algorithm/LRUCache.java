@@ -2,6 +2,7 @@ package com.shawny.core.algorithm;
 
 
 import com.shawny.core.Cache;
+import com.shawny.core.DefaultCacheWrap;
 
 import java.util.LinkedHashMap;
 
@@ -12,7 +13,7 @@ import java.util.LinkedHashMap;
  *
  * TODO 并发
  */
-public class LRUCache<K,V> extends LinkedHashMap<K,V> implements Cache {
+public class LRUCache<K,V> extends LinkedHashMap<K,V> implements Cache<K,V> {
 
 
     static final int DEFAULT_CAPACITY = 1 << 4;
@@ -32,17 +33,22 @@ public class LRUCache<K,V> extends LinkedHashMap<K,V> implements Cache {
 
     @Override
     public CacheWrap getCache(Object key) {
-        return null;
+        V v = super.get(key);
+        if(v !=null){
+            return new DefaultCacheWrap(v);
+        }else {
+            return new DefaultCacheWrap(null);
+        }
     }
 
     @Override
-    public void putCache(Object key, Object value) {
-
+    public void putCache(K key, V value) {
+        super.put(key,value);
     }
 
     @Override
     public void deleteCache(Object key) {
-
+        super.remove(key);
     }
 
     /*@Override

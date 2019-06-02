@@ -1,5 +1,6 @@
 package com.shawny.config;
 
+import com.shawny.core.algorithm.SelectCacheCode;
 import lombok.Data;
 
 /**

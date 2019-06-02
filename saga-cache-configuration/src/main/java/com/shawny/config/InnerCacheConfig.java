@@ -1,5 +1,6 @@
 package com.shawny.config;
 
+import com.shawny.core.Cache;
 import lombok.Data;
 
 /**
@@ -8,4 +9,5 @@ import lombok.Data;
 @Data
 public class InnerCacheConfig extends ConfigBase{
     private String strategy;
+    private Cache cacheSelector;
 }

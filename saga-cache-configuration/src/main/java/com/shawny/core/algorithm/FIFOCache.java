@@ -1,9 +1,25 @@
 package com.shawny.core.algorithm;
 
+import com.shawny.core.Cache;
+
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public class FIFOCache {
+public class FIFOCache<K,V> implements Cache<K,V>{
+    @Override
+    public CacheWrap getCache(Object key) {
+        return null;
+    }
+
+    @Override
+    public void putCache(K key, V value) {
+
+    }
+
+    @Override
+    public void deleteCache(Object key) {
+
+    }
 
     /*@Override
     public Object putValue(Object o, Object o2) {
