@@ -2,7 +2,7 @@ package com.shawny.core;
 
 import com.shawny.config.ConfigBase;
 import com.shawny.config.ExternalConfig;
-import com.shawny.config.RedisConfig;
+import com.shawny.config.RedisCacheConfig;
 import com.shawny.config.SagaCacheConfig;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -11,23 +11,23 @@ import redis.clients.jedis.JedisPoolConfig;
  * Created by shawn_lin on 2019/6/1.
  */
 public class RedisCacheBuilder extends AbstractBuilder{
-    private RedisConfig redisConfig;
+    private RedisCacheConfig redisCacheConfig;
 
     public RedisCacheBuilder(SagaCacheConfig sagaCacheConfig){
         super(sagaCacheConfig);
-        this.redisConfig = getRedisConfig();
-        this.setCacheFunction(config-> new RedisCache((RedisConfig)config));
+        this.redisCacheConfig = getRedisCacheConfig();
+        this.setCacheFunction(config-> new RedisCache((RedisCacheConfig)config));
     }
 
-    private RedisConfig getRedisConfig(){
-        RedisConfig redisConfig = new RedisConfig();
-        redisConfig.setJedisPool(getJedisPool());
-        return redisConfig;
+    private RedisCacheConfig getRedisCacheConfig(){
+        RedisCacheConfig redisCacheConfig = new RedisCacheConfig();
+        redisCacheConfig.setJedisPool(getJedisPool());
+        return redisCacheConfig;
     }
 
     @Override
     public ConfigBase getConfig() {
-        return redisConfig;
+        return redisCacheConfig;
     }
 
     private JedisPool getJedisPool(){

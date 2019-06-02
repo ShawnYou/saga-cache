@@ -2,6 +2,13 @@ saga-cache:
      external:
           changer: on
           type: redis
-     interna:
+               timeout: 10000
+               host: 127.0.0.1
+               port: 6379
+               password: 111111
+               maxIdle: 300
+               maxTotal: 1000
+               maxWaitMillis: 1000
+     internal:
           changer: off
           type: LRU

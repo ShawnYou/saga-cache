@@ -37,13 +37,7 @@ public class InnerCacheTest {
         Assert.assertTrue("1111".equals(address.toString()));
     }
 
-    /*@Test
-    public void shouldReturnResultWhenUseLruCache(){
-        lruCache.put("111",222);
-
-        Integer value = (Integer)lruCache.get("111");
-        assertTrue(value == 222);
-    }
+    /*
 
     @Test
     public void shouldReturnResultAfterBatchPut(){

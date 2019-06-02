@@ -1,6 +1,6 @@
 package com.shawny.core;
 
-import com.shawny.config.RedisConfig;
+import com.shawny.config.RedisCacheConfig;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
@@ -10,9 +10,9 @@ import redis.clients.jedis.JedisPool;
 public class RedisCache extends AbstractCache{
     private JedisPool jedisPool;
 
-    public RedisCache(RedisConfig redisConfig) {
-        super(redisConfig);
-        this.jedisPool = redisConfig.getJedisPool();
+    public RedisCache(RedisCacheConfig redisCacheConfig) {
+        super(redisCacheConfig);
+        this.jedisPool = redisCacheConfig.getJedisPool();
     }
 
     @Override
