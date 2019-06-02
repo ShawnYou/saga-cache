@@ -1,4 +1,4 @@
-package com.shawny.annotaion;
+package com.shawny.annotation;
 
 import java.lang.annotation.*;
 
@@ -10,5 +10,7 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Inherited
 @Documented
-public @interface FixDataDelay {
+public @interface CacheDelete {
+
+    String cacheName();
 }

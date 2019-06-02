@@ -1,4 +1,4 @@
-package com.shawny.annotaion;
+package com.shawny.annotation;
 
 import java.lang.annotation.*;
 
