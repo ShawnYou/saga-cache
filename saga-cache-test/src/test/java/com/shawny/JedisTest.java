@@ -31,7 +31,6 @@ public class JedisTest {
 
         jedis.set("name","zhangsan");
         String name = jedis.get("name");
-
         Assert.assertTrue("zhangsan".equals(name));
     }
 }
