@@ -1,6 +1,5 @@
 package com.shawny.sagacache.annotation;
 
-import com.shawny.configuration.SagaCacheSelector;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
