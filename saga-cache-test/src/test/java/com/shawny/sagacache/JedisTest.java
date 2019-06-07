@@ -1,4 +1,4 @@
-package com.shawny;
+package com.shawny.sagacache;
 
 import org.junit.Assert;
 import org.junit.Test;

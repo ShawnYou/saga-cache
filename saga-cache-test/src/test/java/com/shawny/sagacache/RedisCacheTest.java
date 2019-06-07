@@ -1,4 +1,4 @@
-package com.shawny;
+package com.shawny.sagacache;
 
 import com.shawny.sagacache.config.ExternalConfig;
 import com.shawny.sagacache.config.InternalConfig;
