@@ -1,2 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.shawny.sagacache.autoconfigure.SagaCacheAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.shawny.sagacache.autoconfigure.SagaCacheAutoConfiguration

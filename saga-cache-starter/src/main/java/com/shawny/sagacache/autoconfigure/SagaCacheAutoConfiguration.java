@@ -3,8 +3,8 @@ package com.shawny.sagacache.autoconfigure;
 
 import com.shawny.sagacache.annotation.EnableSagaCache;
 import com.shawny.sagacache.aop.CacheAdvisor;
+import com.shawny.sagacache.aop.SagaCacheInterceptor;
 import org.springframework.beans.BeansException;
-import org.springframework.cache.interceptor.CacheInterceptor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -33,14 +33,6 @@ public class SagaCacheAutoConfiguration implements ImportAware,ApplicationContex
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
-    }
-
-    @Bean
-    public CacheAdvisor sagaCacheAdvisor(){
-        CacheInterceptor interceptor = new CacheInterceptor();
-        CacheAdvisor advisor = new CacheAdvisor();
-        advisor.setAdvice(interceptor);
-        return advisor;
     }
 
 }
