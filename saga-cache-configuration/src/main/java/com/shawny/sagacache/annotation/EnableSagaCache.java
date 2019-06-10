@@ -10,7 +10,7 @@ import java.lang.annotation.*;
  */
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
+@Target(ElementType.TYPE)
 @Documented
 @Import(SagaCacheSelector.class)
 public @interface EnableSagaCache {
