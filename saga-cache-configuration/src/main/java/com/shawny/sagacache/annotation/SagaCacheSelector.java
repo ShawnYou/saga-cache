@@ -25,7 +25,7 @@ public class SagaCacheSelector extends AdviceModeImportSelector<EnableSagaCache>
 
     private String[] getProxyImports(){
         List<String> result = new ArrayList<>();
-        //result.add();
+        result.add("com.shawny.sagacache.autoconfigure.sagaCacheAutoConfiguration");
         return result.toArray(new String[result.size()]);
     }
 }
