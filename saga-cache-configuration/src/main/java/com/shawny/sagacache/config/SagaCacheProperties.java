@@ -7,6 +7,7 @@ import lombok.Data;
  */
 @Data
 
+@Data
 public class SagaCacheProperties {
     private String type;
     private String name;
