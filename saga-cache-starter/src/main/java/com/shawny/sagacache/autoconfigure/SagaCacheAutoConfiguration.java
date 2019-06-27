@@ -34,13 +34,4 @@ public class SagaCacheAutoConfiguration implements ImportAware,ApplicationContex
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
     }
-
-    @Bean
-    public SagaCacheInterceptor cacheInterceptor(){
-        SagaCacheInterceptor interceptor = new SagaCacheInterceptor();
-        CacheAdvisor cacheAdvisor = new CacheAdvisor();
-        cacheAdvisor.setAdvice(interceptor);
-        return interceptor;
-    }
-
 }
