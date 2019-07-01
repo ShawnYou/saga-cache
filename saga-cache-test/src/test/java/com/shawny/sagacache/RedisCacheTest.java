@@ -54,5 +54,4 @@ public class RedisCacheTest {
         Assert.assertTrue(ret == null);
     }
 
-
 }
