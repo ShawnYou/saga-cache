@@ -1,32 +1,23 @@
 package com.shawny.sagacache;
 
-import com.shawny.sagacache.config.InternalConfig;
-import com.shawny.sagacache.config.SagaCacheConfig;
 import com.shawny.sagacache.core.Cache;
 import com.shawny.sagacache.core.InnerCacheBuilder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by shawn_lin on 2019/4/27.
  */
-public class InnerCacheTest {
+public class InnerCacheTest extends BaseTest{
 
     private Cache cache;
 
     @Before
     public void init(){
-        SagaCacheConfig cacheConfig = new SagaCacheConfig();
 
-        InternalConfig internal = new InternalConfig();
-        internal.setType("HashMap");
-        internal.setChanger("T");
-        internal.setStrategy("LRU");
-
-        cacheConfig.setInternalConfig(internal);
-
-        InnerCacheBuilder builder = new InnerCacheBuilder(cacheConfig);
+        InnerCacheBuilder builder = new InnerCacheBuilder(sagaCacheProperties);
         cache = builder.buildCache();
     }
 

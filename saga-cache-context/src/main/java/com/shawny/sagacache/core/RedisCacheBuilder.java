@@ -1,9 +1,8 @@
 package com.shawny.sagacache.core;
 
 import com.shawny.sagacache.config.ConfigBase;
-import com.shawny.sagacache.config.ExternalConfig;
 import com.shawny.sagacache.config.RedisCacheConfig;
-import com.shawny.sagacache.config.SagaCacheConfig;
+import com.shawny.sagacache.config.SagaCacheProperties;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -13,8 +12,8 @@ import redis.clients.jedis.JedisPoolConfig;
 public class RedisCacheBuilder extends AbstractBuilder {
     private RedisCacheConfig redisCacheConfig;
 
-    public RedisCacheBuilder(SagaCacheConfig sagaCacheConfig){
-        super(sagaCacheConfig);
+    public RedisCacheBuilder(SagaCacheProperties sagaCacheProperties){
+        super(sagaCacheProperties);
         this.redisCacheConfig = getRedisCacheConfig();
         this.setCacheFunction(config-> new RedisCache((RedisCacheConfig)config));
     }
@@ -31,7 +30,7 @@ public class RedisCacheBuilder extends AbstractBuilder {
     }
 
     private JedisPool getJedisPool(){
-        ExternalConfig external = sagaCacheConfig.getExternalConfig();
+        SagaCacheProperties.ExternalProperty external = sagaCacheProperties.getExternal();
 
         JedisPool jedisPool = null;
         try {
@@ -48,4 +47,5 @@ public class RedisCacheBuilder extends AbstractBuilder {
 
         return jedisPool;
     }
+
 }

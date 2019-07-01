@@ -1,9 +1,16 @@
 package com.shawny.sagacache.core;
 
+import com.shawny.sagacache.config.ConfigBase;
+
 /**
  * Created by shawn_lin on 2019/5/30.
  */
 public abstract class AbstractCache implements Cache {
+    private ConfigBase configBase;
+
+    public AbstractCache(ConfigBase configBase){
+        this.configBase = configBase;
+    }
 
     @Override
     public CacheWrap getCache(Object key) {

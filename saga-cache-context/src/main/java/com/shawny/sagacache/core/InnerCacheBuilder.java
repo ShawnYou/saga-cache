@@ -2,10 +2,10 @@ package com.shawny.sagacache.core;
 
 import com.shawny.sagacache.config.ConfigBase;
 import com.shawny.sagacache.config.InnerCacheConfig;
-import com.shawny.sagacache.config.InternalConfig;
-import com.shawny.sagacache.config.SagaCacheConfig;
+import com.shawny.sagacache.config.SagaCacheProperties;
 import com.shawny.sagacache.core.algorithm.FIFOCache;
 import com.shawny.sagacache.core.algorithm.LRUCache;
+import org.springframework.util.Assert;
 
 /**
  * Created by shawn_lin on 2019/6/1.
@@ -14,9 +14,9 @@ public class InnerCacheBuilder extends AbstractBuilder {
 
     private InnerCacheConfig innerCacheConfig;
 
-    public InnerCacheBuilder(SagaCacheConfig cacheConfig) {
-        super(cacheConfig);
-        this.innerCacheConfig = getInnerCacheConfig(sagaCacheConfig);
+    public InnerCacheBuilder(SagaCacheProperties sagaCacheProperties) {
+        super(sagaCacheProperties);
+        this.innerCacheConfig = getInnerCacheConfig(sagaCacheProperties);
         this.setCacheFunction(config -> new InnerCache(innerCacheConfig));
     }
 
@@ -25,10 +25,11 @@ public class InnerCacheBuilder extends AbstractBuilder {
         return innerCacheConfig;
     }
 
-    private InnerCacheConfig getInnerCacheConfig(SagaCacheConfig sagaCacheConfig){
+    private InnerCacheConfig getInnerCacheConfig(SagaCacheProperties sagaCacheProperties){
         Cache cache = null;
-        InternalConfig internalConfig = sagaCacheConfig.getInternalConfig();
-        String strategy= internalConfig.getStrategy();
+        SagaCacheProperties.InternalProperty internal = sagaCacheProperties.getInternal();
+        String strategy= internal.getStrategy();
+        Assert.notNull(strategy,"the configuration about internal cache strategy is null");
         if("LRU".equalsIgnoreCase(strategy)){
             cache = new LRUCache();
         }else if("FIFO".equalsIgnoreCase(strategy)){
@@ -36,7 +37,7 @@ public class InnerCacheBuilder extends AbstractBuilder {
         }
         InnerCacheConfig innerCacheConfig = new InnerCacheConfig();
         innerCacheConfig.setCacheSelector(cache);
-        innerCacheConfig.setStrategy(internalConfig.getStrategy());
+        innerCacheConfig.setStrategy(internal.getStrategy());
         return innerCacheConfig;
     }
 }
