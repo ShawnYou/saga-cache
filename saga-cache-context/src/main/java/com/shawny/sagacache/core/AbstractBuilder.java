@@ -1,7 +1,7 @@
 package com.shawny.sagacache.core;
 
 import com.shawny.sagacache.config.ConfigBase;
-import com.shawny.sagacache.config.SagaCacheConfig;
+import com.shawny.sagacache.config.SagaCacheProperties;
 
 import java.util.function.Function;
 
@@ -10,12 +10,12 @@ import java.util.function.Function;
  */
 public abstract class AbstractBuilder implements CacheBuilder {
 
-    protected SagaCacheConfig sagaCacheConfig;
+    protected SagaCacheProperties sagaCacheProperties;
 
     private Function<ConfigBase,Cache> cacheFunction;
 
-    public AbstractBuilder(SagaCacheConfig sagaCacheConfig){
-        this.sagaCacheConfig = sagaCacheConfig;
+    public AbstractBuilder(SagaCacheProperties sagaCacheProperties){
+        this.sagaCacheProperties = sagaCacheProperties;
     }
 
     public abstract ConfigBase getConfig();
