@@ -24,7 +24,7 @@
     <dependencies>
         <dependency>
             <groupId>com.shawny</groupId>
-            <artifactId>saga-cache-configuration</artifactId>
+            <artifactId>saga-cache-context</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
