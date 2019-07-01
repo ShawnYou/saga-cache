@@ -14,4 +14,5 @@ public class SagaCachingConfiguration {
         SagaCacheInterceptor cacheInterceptor = new SagaCacheInterceptor();
         return cacheInterceptor;
     }
+
 }
