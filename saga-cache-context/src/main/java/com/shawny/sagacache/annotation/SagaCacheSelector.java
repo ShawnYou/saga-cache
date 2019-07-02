@@ -29,8 +29,8 @@ public class SagaCacheSelector extends AdviceModeImportSelector<EnableSagaCache>
     private String[] getProxyImports(){
         List<String> result = new ArrayList<>();
         result.add(AutoProxyRegistrar.class.getName());
-        //result.add(SagaCachingConfiguration.class.getName());
-        //result.add(RedisConfiguration.class.getName());
+        result.add(SagaCachingConfiguration.class.getName());
+        result.add(RedisConfiguration.class.getName());
         return result.toArray(new String[result.size()]);
     }
 }
