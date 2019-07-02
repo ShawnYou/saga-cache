@@ -16,13 +16,13 @@ public class InnerCacheBuilder extends AbstractBuilder {
 
     public InnerCacheBuilder(SagaCacheProperties sagaCacheProperties) {
         super(sagaCacheProperties);
-        this.innerCacheConfig = getInnerCacheConfig(sagaCacheProperties);
+        this.innerCacheConfig = (InnerCacheConfig)getConfig();
         this.setCacheFunction(config -> new InnerCache(innerCacheConfig));
     }
 
     @Override
     public ConfigBase getConfig() {
-        return innerCacheConfig;
+        return getInnerCacheConfig(sagaCacheProperties);
     }
 
     private InnerCacheConfig getInnerCacheConfig(SagaCacheProperties sagaCacheProperties){

@@ -1,5 +1,6 @@
 package com.shawny.sagacache.config;
 
+import com.shawny.sagacache.aop.CachePointCut;
 import com.shawny.sagacache.aop.SagaCacheInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -19,4 +20,9 @@ public class SagaCachingConfiguration {
         return cacheInterceptor;
     }
 
+    @Bean
+    public CachePointCut cachePointCut(){
+        CachePointCut pointCut = new CachePointCut();
+        return pointCut;
+    }
 }

@@ -13,7 +13,7 @@ public class RedisConfiguration {
     SagaCacheProperties sagaCacheProperties;
 
 
-    @Bean
+    /*@Bean
     public JedisPoolConfig getJedisPoolConfig(){
         JedisPoolConfig poolConfig = new JedisPoolConfig();
         poolConfig.setMaxIdle(10);
@@ -29,17 +29,5 @@ public class RedisConfiguration {
         //redisTemplate.setKeySerializer();
         return redisTemplate;
     }
-
-    @Bean
-    public JedisConnectionFactory getConnectionFactory(){
-        JedisConnectionFactory connectionFactory = new JedisConnectionFactory();
-        connectionFactory.setPoolConfig(getJedisPoolConfig());
-        connectionFactory.setPort(sagaCacheProperties.getExternal().getPort());
-        connectionFactory.setHostName(sagaCacheProperties.getExternal().getHost());
-        //connectionFactory.setPassword("");
-        connectionFactory.setTimeout(10000);
-        return connectionFactory;
-    }
-
-
+    */
 }

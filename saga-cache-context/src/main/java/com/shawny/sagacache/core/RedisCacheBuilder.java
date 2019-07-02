@@ -14,38 +14,25 @@ public class RedisCacheBuilder extends AbstractBuilder {
 
     public RedisCacheBuilder(SagaCacheProperties sagaCacheProperties){
         super(sagaCacheProperties);
-        this.redisCacheConfig = getRedisCacheConfig();
+        this.redisCacheConfig = (RedisCacheConfig)this.getConfig();
         this.setCacheFunction(config-> new RedisCache((RedisCacheConfig)config));
     }
 
     private RedisCacheConfig getRedisCacheConfig(){
         RedisCacheConfig redisCacheConfig = new RedisCacheConfig();
-        redisCacheConfig.setJedisPool(getJedisPool());
+
+        //redisCacheConfig.setJedisPool(getJedisPool());
         return redisCacheConfig;
     }
 
     @Override
     public ConfigBase getConfig() {
-        return redisCacheConfig;
+        return this.getRedisCacheConfig();
     }
 
-    private JedisPool getJedisPool(){
-        SagaCacheProperties.ExternalProperty external = sagaCacheProperties.getExternal();
-
-        JedisPool jedisPool = null;
-        try {
-            JedisPoolConfig config = new JedisPoolConfig();
-            config.setMaxIdle(external.getMaxIdle());
-            config.setMaxWaitMillis(external.getMaxWaitMillis());
-            config.setMaxTotal(external.getMaxTotal());
-
-            //
-            jedisPool = new JedisPool(config,external.getHost(),external.getPort());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-        return jedisPool;
+    private JedisPoolConfig getJedisPoolConfig(){
+        SagaCacheProperties.ExternalProperty externalProperty = sagaCacheProperties.getExternal();
+        return null;
     }
 
 }
