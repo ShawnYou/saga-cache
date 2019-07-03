@@ -18,10 +18,8 @@ import org.springframework.data.redis.core.RedisTemplate;
  * Created by shawn_lin on 2019/5/9.
  */
 @Configuration
-@Import(RedisConfiguration.class)
+@Import({RedisCacheAutoInit.class,InnerCacheAutoInit.class})
 public class SagaCacheAutoConfiguration implements ImportAware,ApplicationContextAware {
-    @Autowired
-    private RedisTemplate redisTemplate;
 
     private ApplicationContext applicationContext;
 

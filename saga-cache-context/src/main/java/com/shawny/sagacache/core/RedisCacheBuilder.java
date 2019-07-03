@@ -3,6 +3,7 @@ package com.shawny.sagacache.core;
 import com.shawny.sagacache.config.ConfigBase;
 import com.shawny.sagacache.config.RedisCacheConfig;
 import com.shawny.sagacache.config.SagaCacheProperties;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -32,7 +33,17 @@ public class RedisCacheBuilder extends AbstractBuilder {
     }
 
     private JedisPoolConfig getJedisPoolConfig(){
+        //TODO
         SagaCacheProperties.ExternalProperty externalProperty = sagaCacheProperties.getExternal();
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+        //jedisPoolConfig.setMinIdle(externalProperty.get);
+        jedisPoolConfig.setMaxTotal(externalProperty.getMaxTotal());
+        jedisPoolConfig.setMaxWaitMillis(10000);
+        return jedisPoolConfig;
+    }
+
+    private JedisConnectionFactory jedisConnectionFactory(){
+        //TODO redisTemplate 生成
         return null;
     }
 
