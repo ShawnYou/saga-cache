@@ -28,26 +28,16 @@ public abstract class AbstractCacheConfigAutoInit implements InitializingBean{
 
     @Override
     public void afterPropertiesSet() throws Exception {
-
-
         if(!isInit){
             synchronized (this){
                 doProcess(sagaCacheProperties);
             }
         }
-
     }
 
     private void doProcess(SagaCacheProperties sagaCacheProperties){
-        SagaCacheProperties.ExternalProperty externalProperty = sagaCacheProperties.getExternal();
-        SagaCacheProperties.InternalProperty internalProperty = sagaCacheProperties.getInternal();
         cacheBuilders.add(createCacheBuilder(sagaCacheProperties));
-
     }
 
     protected abstract CacheBuilder createCacheBuilder(SagaCacheProperties sagaCacheProperties);
-
-
-
-
 }

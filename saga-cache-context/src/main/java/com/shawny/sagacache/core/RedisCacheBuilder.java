@@ -20,6 +20,7 @@ public class RedisCacheBuilder extends AbstractBuilder {
 
     private RedisCacheConfig getRedisCacheConfig(){
         RedisCacheConfig redisCacheConfig = new RedisCacheConfig();
+        SagaCacheProperties.ExternalProperty externalProperty = sagaCacheProperties.getExternal();
 
         //redisCacheConfig.setJedisPool(getJedisPool());
         return redisCacheConfig;
