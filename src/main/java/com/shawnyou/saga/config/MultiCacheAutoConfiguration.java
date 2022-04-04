@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 
 /**
+ * 多级缓存配置
+ * 
  * @version 1.0 created by youshuanglin on 2022/4/4 5:11 下午
  */
 @Data
