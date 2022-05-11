@@ -20,4 +20,5 @@ public class CacheManagerConfiguration {
     public RedisSerializer redisSerializer() {
         return new GenericJackson2JsonRedisSerializer();
     }
+
 }

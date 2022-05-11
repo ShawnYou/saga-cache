@@ -8,5 +8,4 @@ class SagaCacheApplicationTests {
 
     @Test
     void contextLoads() {}
-
 }
