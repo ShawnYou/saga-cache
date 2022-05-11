@@ -18,7 +18,7 @@ public class LocalCacheManagerAdapter extends AbstractCacheManager {
 
     @Override
     protected Collection<? extends Cache> loadCaches() {
-
+        LocalCacheManager localCacheManager = localCacheManagerMap.get("0");
         return null;
     }
 }

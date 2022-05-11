@@ -1,5 +1,8 @@
 package com.shawnyou.saga.core;
 
+import java.util.Collection;
+
+import org.springframework.cache.Cache;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
 
 /**
@@ -7,4 +10,8 @@ import org.springframework.cache.caffeine.CaffeineCacheManager;
  */
 public class CaffeineCacheManagerAdapter extends CaffeineCacheManager implements LocalCacheManager {
 
+    @Override
+    public Collection<Cache> loadCaches() {
+
+    }
 }
